@@ -59,15 +59,3 @@ th, td {
 th {
     background-color: #f0f4f8;
 }
-.watermark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  font-size: 16px;
-  color: #ccc;
-  pointer-events: none;
-}
-
-.input-group input[type="number"] {
-  padding-left: 20px;
-}
