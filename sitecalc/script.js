@@ -31,30 +31,7 @@ function calculateDailyReturns() {
     let rate = parseFloat(document.getElementById('rate').value);
     let traderProfit = parseFloat(document.getElementById('trader').value);
     let selectedOption = document.getElementById('trader').selectedOptions[0].text;
-    let days = parseInt(selectedOption.match(/(\d+) days/)[1]);
-
-    let dailyProfitRate = Math.pow(1 + traderProfit, 1 / days) - 1;
-    let dailyProfit = amount * dailyProfitRate;
-    let dailyResultados = document.getElementById('dailyResultados');
-    let resultHTML = `<h2>Rendimentos Diários Por Ciclo (${days} dias)</h2>`;
-    resultHTML += `<table><tr><th>Dias</th><th>Rendimento Diário ($)</th><th>Rendimento Diário (R$)</th></tr>`;
-
-    for (let i = 1; i <= days; i++) {
-        amount += dailyProfit;
-        resultHTML += `<tr><td>${i}</td><td>${dailyProfit.toFixed(2)}</td><td>${(dailyProfit * rate).toFixed(2)}</td></tr>`;
-        dailyProfit = amount * dailyProfitRate;  // Recalculate profit as it compounds daily
-    }
-
-    resultHTML += `</table>`;
-    dailyResultados.innerHTML = resultHTML;
-}
-
-function calculateDailyReturns() {
-    let amount = parseFloat(document.getElementById('amount').value);
-    let rate = parseFloat(document.getElementById('rate').value);
-    let traderProfit = parseFloat(document.getElementById('trader').value);
-    let selectedOption = document.getElementById('trader').selectedOptions[0].text;
-    let days = parseInt(selectedOption.match(/(\d+) days/)[1]);
+    let days = parseInt(selectedOption.match(/(\d+) dias/)[1]);
 
     let dailyProfitRate = Math.pow(1 + traderProfit, 1 / days) - 1;
     let dailyProfit = amount * dailyProfitRate;
