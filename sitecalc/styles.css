@@ -5,7 +5,8 @@ body {
 }
 
 .container {
-    width: 178vw;
+    width: 50vw;
+    height: 80vw;
     margin: 50px auto;
     padding: 20px;
     background-color: #fef6e4; /* Soft pastel peach */
