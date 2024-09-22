@@ -5,9 +5,16 @@
     <meta name="viewport" content="width=device-width,height=device-height, initial-scale=1.0">
     <title>Calculadora de Investimentos Beefund</title>
     <link rel="stylesheet" href="styles.css">
+        
 </head>
 <body>
+    
     <div class="container">
+        <div class="thumb">
+
+            <img src="images/beefund.jpg" alt="beefund" width="140px">
+        
+            </div>
         <h1>Calculadora de Investimentos Beefund</h1>
         <form id="calculator">
             <div class="input-group">
@@ -27,20 +34,20 @@
             <button type="button" id="dailyReturnsBtn">Ver Rendimento Diário</button>
             <div id="dailyResultados"></div>
             
-
             <div class="input-group">
                 <label for="trader">Traders:</label>
-                <select id="trader">
-                    <option value="0.47">Anne Richards - 15 dias - 47% de Rendimento</option>
-                    <option value="0.54">Oanda - 15 dias - 54% de Rendimento</option>  <!-- Corrigido: Incluído o prazo para Oanda -->
-                    <option value="0.16">PepperStone - 7 dias - 16% de Rendimento</option>
-                    <option value="0.095">Interactive Brokers - 3 dias - 9.5% de Rendimento</option>
-                    <option value="1.03">Tradovate - 30 dias - 103% de Rendimento</option>
-                    <option value="0.028">Sabrina Gan - 1 dia - 2.8% de Rendimento</option> <!-- Corrigido: "1 dias" para "1 dia" -->
-                    <option value="0.23">John Gerdes - 7 dias - 23% de Rendimento</option>
-                    <option value="3.54">Julie Wilson - 90 dias - 354% de Rendimento</option>
-                    <option value="8.94">Austin Garcia - 180 dias - 894% de Rendimento</option>
-                </select>
+                <select id="trader" width: 100%>
+                    <option value="0.47" data-days="15">Anne Richards - 15 dias - 47% de Rendimento</option>
+                    <option value="0.54" data-days="15">Oanda - 15 dias - 54% de Rendimento</option>
+                    <option value="0.16" data-days=>Pepperstone - 7 dias - 16% de Rendimento</option>
+                    <option value="0.095" data-days="3">Interactive Brokers - 3 dias - 9.5% de Rendimento</option>
+                    <option value="1.03" data-days="30">Tradovate - 30 dias - 103% de Rendimento</option>
+                    <option value="0.028" data-days="1">Sabrina Gan - 1 dia - 2.8% de Rendimento</option>
+                    <option value="0.23" data-days="7">John Gerdes - 7 dias - 23% de Rendimento</option>
+                    <option value="3.54" data-days="90">Julie Wilson - 90 dias - 354% de Rendimento</option>
+                    <option value="8.94" data-days="180">Austin Garcia - 180 dias - 894% de Rendimento</option>
+                  </select>
+                  
             </div>
             <button type="submit">Calcular</button>
         </form>
