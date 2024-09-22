@@ -2,12 +2,17 @@ body {
     font-family: 'Arial', sans-serif;
     background-color: #f0f4f8; /* Soft gray-blue background */
     color: #333; /* Darker text for better readability */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
 }
 
 .container {
-    width: 50vw;
-    height: 80vw;
-    margin: 50px auto;
+    width: 100%;
+    max-width: 360px; /* Maximum width for larger devices */
     padding: 20px;
     background-color: #fef6e4; /* Soft pastel peach */
     box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth */
