@@ -1,4 +1,4 @@
-/* Estilos base que você já definiu */
+/* Estilos base */
 
 body {
     font-family: 'Arial', sans-serif;
@@ -68,23 +68,20 @@ th {
     background-color: #f0f4f8;
 }
 
-/* Media queries para ajustes em dispositivos móveis */
+/* Ajustes específicos para telas de alta resolução e dispositivos menores */
 
-@media (max-width: 1000px) {
-    body {
-        font-size: 16px; /* Aumentar a fonte para melhor legibilidade */
-    }
-
+@media (max-width: 600px) {
     .container {
-        width: 100%; /* Aumentar a largura para mais espaço */
-        padding: 50px; /* Aumentar o padding para mais espaço interno */
+        width: 90%; /* Use mais espaço na tela */
+        padding: 20px; /* Padding confortável */
     }
 
     input, select, button {
-        padding: 16px; /* Aumentar o padding para fácil interação */
+        padding: 15px; /* Maior para fácil interação */
+        font-size: 18px; /* Fontes maiores para legibilidade */
     }
 
     h1 {
-        font-size: 22px; /* Aumentar o tamanho da fonte do título */
+        font-size: 24px; /* Título maior para destaque */
     }
 }
