@@ -72,8 +72,8 @@ th {
 
 @media (max-width: 600px) {
     .container {
-        width: 90%; /* Use mais espaço na tela */
-        padding: 20px; /* Padding confortável */
+        width: 68%; /* Use mais espaço na tela */
+        padding: 22px; /* Padding confortável */
     }
 
     input, select, button {
