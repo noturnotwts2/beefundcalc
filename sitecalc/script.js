@@ -49,7 +49,7 @@ function calculate() {
     for (let i = 1; i <= Ciclo; i++) {
         let profit = amount * profitRate;
         amount += profit;
-        resultHTML += `<p class="ciclo-box">Ciclo ${i}: $${amount.toFixed(2)}<br>(R$ ${(amount * rate).toFixed(2)})</p>`;
+        resultHTML += `<p class="ciclo-box">Ciclo ${i}: ${amount.toLocaleString('pt-BR', { style: 'currency', currency: 'USD' })}<br>(${(amount * rate).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })})</p>`;
         
     }
 
