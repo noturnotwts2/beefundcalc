@@ -9,6 +9,35 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('calculator').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the form from submitting in the traditional way
+        calculate();
+    });
+
+    document.getElementById('dailyReturnsBtn').addEventListener('click', function(event) {
+        calculateDailyReturns(); // Calculate daily returns when this button is clicked
+    });
+
+    // Toggle the visibility of the "Ver Rendimentos Diários" section
+    let rendimentosDiariosVisible = false;
+
+    const dailyReturnsBtn = document.getElementById('dailyReturnsBtn');
+    const dailyResultados = document.getElementById('dailyResultados');
+
+    dailyReturnsBtn.addEventListener('click', () => {
+        if (!rendimentosDiariosVisible) {
+            dailyResultados.style.display = 'block';
+            rendimentosDiariosVisible = true;
+        } else {
+            dailyResultados.style.display = 'none';
+            rendimentosDiariosVisible = false;
+        }
+    });
+});
+
+// ... rest of your code ...
+
 function calculate() {
     let amount = parseFloat(document.getElementById('amount').value);
     let Ciclo = parseInt(document.getElementById('Ciclo').value);
@@ -20,13 +49,12 @@ function calculate() {
     for (let i = 1; i <= Ciclo; i++) {
         let profit = amount * profitRate;
         amount += profit;
-        resultHTML += `<p class="ciclo-box">Ciclo ${i}: $${amount.toFixed(2)} ㅤㅤㅤㅤㅤㅤㅤ(R$ ${(amount * rate).toFixed(2)})</p>`;
+        resultHTML += `<p class="ciclo-box">Ciclo ${i}: $${amount.toFixed(2)}<br>(R$ ${(amount * rate).toFixed(2)})</p>`;
         
     }
 
     Resultados.innerHTML = resultHTML;
 }
-
 
 fetch('https://economia.awesomeapi.com.br/json/last/USD-BRL')
   .then(response => response.json())
@@ -43,6 +71,8 @@ function calculateDailyReturns() {
     let traderProfit = parseFloat(document.getElementById('trader').value);
     let selectedOption = document.getElementById('trader').selectedOptions[0].text;
     let days = parseInt(selectedOption.match(/(\d+) dias/)[1]);
+
+    
 
     let dailyProfitRate = Math.pow(1 + traderProfit, 1 / days) - 1;
     let dailyProfit = amount * dailyProfitRate;
