@@ -2,6 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora de Investimentos Beefund</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -14,7 +15,7 @@
                 <input type="number" id="amount" required>
             </div>
             <div class="input-group">
-                <label for="Ciclos">Número de Ciclos:</label>
+                <label for="Ciclo">Número de Ciclos:</label>
                 <input type="number" id="Ciclo" required>
             </div>
             <div class="input-group">
@@ -29,21 +30,18 @@
                 <label for="trader">Traders:</label>
                 <select id="trader">
                     <option value="0.47">Anne Richards - 15 dias - 47% de Rendimento</option>
-                    <option value="0.54">Oanda - dias - 54% de Rendimento</option>
+                    <option value="0.54">Oanda - 15 dias - 54% de Rendimento</option>  <!-- Corrigido: Incluído o prazo para Oanda -->
                     <option value="0.16">PepperStone - 7 dias - 16% de Rendimento</option>
                     <option value="0.095">Interactive Brokers - 3 dias - 9.5% de Rendimento</option>
                     <option value="1.03">Tradovate - 30 dias - 103% de Rendimento</option>
-                    <option value="0.028">Sabrina Gan - 1 dias - 2.8% de Rendimento</option>
+                    <option value="0.028">Sabrina Gan - 1 dia - 2.8% de Rendimento</option> <!-- Corrigido: "1 dias" para "1 dia" -->
                     <option value="0.23">John Gerdes - 7 dias - 23% de Rendimento</option>
-
                 </select>
-                
             </div>
             <button type="submit">Calcular</button>
         </form>
         <div id="Resultados"></div>
     </div>
     <script src="script.js"></script>
-    <link rel="stylesheet" href="styles.css">
 </body>
 </html>
