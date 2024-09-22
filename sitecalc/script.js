@@ -20,11 +20,22 @@ function calculate() {
     for (let i = 1; i <= Ciclo; i++) {
         let profit = amount * profitRate;
         amount += profit;
-        resultHTML += `<p>Ciclo ${i}: $${amount.toFixed(2)} (R$ ${(amount * rate).toFixed(2)})</p>`;
+        resultHTML += `<p class="ciclo-box">Ciclo ${i}: $${amount.toFixed(2)} ㅤㅤㅤㅤㅤㅤㅤ(R$ ${(amount * rate).toFixed(2)})</p>`;
+        
     }
 
     Resultados.innerHTML = resultHTML;
 }
+
+
+fetch('https://economia.awesomeapi.com.br/json/last/USD-BRL')
+  .then(response => response.json())
+  .then(data => {
+    const valorDolar = data.USDBRL.bid;
+    document.getElementById('valorDolar').innerHTML = `R$ ${valorDolar}`;
+  })
+  .catch(error => console.error('Erro ao obter o valor do dólar:', error));
+
 
 function calculateDailyReturns() {
     let amount = parseFloat(document.getElementById('amount').value);
