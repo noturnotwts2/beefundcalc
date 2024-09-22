@@ -85,3 +85,11 @@ th {
         font-size: 24px; /* Título maior para destaque */
     }
 }
+
+.ciclo-box {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
