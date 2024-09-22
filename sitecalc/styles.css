@@ -70,21 +70,21 @@ th {
 
 /* Media queries para ajustes em dispositivos móveis */
 
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
     body {
         font-size: 16px; /* Aumentar a fonte para melhor legibilidade */
     }
 
     .container {
-        width: 90%; /* Aumentar a largura para mais espaço */
-        padding: 30px; /* Aumentar o padding para mais espaço interno */
+        width: 100%; /* Aumentar a largura para mais espaço */
+        padding: 50px; /* Aumentar o padding para mais espaço interno */
     }
 
     input, select, button {
-        padding: 15px; /* Aumentar o padding para fácil interação */
+        padding: 16px; /* Aumentar o padding para fácil interação */
     }
 
     h1 {
-        font-size: 20px; /* Aumentar o tamanho da fonte do título */
+        font-size: 22px; /* Aumentar o tamanho da fonte do título */
     }
 }
