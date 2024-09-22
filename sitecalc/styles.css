@@ -1,22 +1,24 @@
+/* Estilos base que você já definiu */
+
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f0f4f8; /* Soft gray-blue background */
-    color: #333; /* Darker text for better readability */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
+    background-color: #f0f4f8;
+    color: #333;
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Full viewport height */
+    height: 100vh;
 }
 
 .container {
     width: 100%;
-    max-width: 360px; /* Maximum width for larger devices */
+    max-width: 360px;
     padding: 20px;
-    background-color: #fef6e4; /* Soft pastel peach */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth */
-    border-radius: 10px; /* Rounded corners */
+    background-color: #fef6e4;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
 }
 
 .input-group {
@@ -26,22 +28,22 @@ body {
 input, select, button {
     width: 100%;
     padding: 12px;
-    border: 1px solid #ddd; /* Light grey border */
-    border-radius: 8px; /* Rounded corners */
-    box-sizing: border-box; /* Ensures padding doesn't affect width */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
 }
 
 button {
-    background-color: #b0c4d1; /* Adjusted to a softer blue */
+    background-color: #b0c4d1;
     color: white;
     font-weight: bold;
     border: none;
     cursor: pointer;
-    transition: background-color 0.3s; /* Smooth transition on hover */
+    transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #9caab8; /* Darkened blue on hover */
+    background-color: #9caab8;
 }
 
 h1 {
@@ -52,8 +54,8 @@ h1 {
 table {
     width: 100%;
     border-collapse: collapse;
-    background-color: white; /* Ensures the table stands out against the form background */
-    margin-top: 20px; /* Adds space between form and table */
+    background-color: white;
+    margin-top: 20px;
 }
 
 th, td {
@@ -64,4 +66,25 @@ th, td {
 
 th {
     background-color: #f0f4f8;
+}
+
+/* Media queries para ajustes em dispositivos móveis */
+
+@media (max-width: 600px) {
+    body {
+        font-size: 16px; /* Aumentar a fonte para melhor legibilidade */
+    }
+
+    .container {
+        width: 90%; /* Aumentar a largura para mais espaço */
+        padding: 30px; /* Aumentar o padding para mais espaço interno */
+    }
+
+    input, select, button {
+        padding: 15px; /* Aumentar o padding para fácil interação */
+    }
+
+    h1 {
+        font-size: 20px; /* Aumentar o tamanho da fonte do título */
+    }
 }
